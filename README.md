@@ -1,8 +1,8 @@
 # alt-v-Linux-Proton-Launcher
 
-First step you should make a dir in ~/.local/share/Proton/Prefixe/Proton Experimental
+First step you should make a dir in `~/.local/share/Proton/Prefixe/Proton Experimental`
 
-Now copy from /Path_to_your_Steamlib/Steam/steamapps/common/Proton - Experimental/files/share/ the folder defaulf_pfx to "~/.local/share/Proton/Prefixe/Proton Experimental" and rename it to "pfx"
+Now copy from `/Path_to_your_Steamlib/Steam/steamapps/common/Proton - Experimental/files/share/` the folder defaulf_pfx to `~/.local/share/Proton/Prefixe/Proton Experimental` and rename it to `pfx`
 
 Install in this new prefix the last dxvk via winetricks. After that you can install the EGS or Rockstar Launcher Version of Grand Theft Auto V, the Teamspeak3 Client in this prefix.
 Alt:V you should install in C:\\Alt-V.
