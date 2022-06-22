@@ -43,3 +43,7 @@ DXVKCONFIGFILE="/opt/Games/Proton/Configs/Grand Theft Auto V/Alt-V/GTA5.conf"
 launchoptions='gamemoderun mangohud obs-vkcapture'
 
 STEAM_COMPAT_CLIENT_INSTALL_PATH="$steamcompatclientinstallpath" STEAM_COMPAT_DATA_PATH="$steamcompatdatapath" STEAM_COMPAT_INSTALL_PATH="$steamcompatinstallpath" STEAM_COMPAT_MOUNTS="$steamcompatmounts" DXVK_STATE_CACHE_PATH="$DXVKSTATECACHEPATH" DXVK_LOG_PATH="$DXVKLOGPATH" DXVK_CONFIG_FILE="$DXVKCONFIGFILE" $launchoptions WINEFSYNC=1 WINEPREFIX="$steamcompatdatapath" $reaper -- $SteamLinuxRuntimeSoldier/_v2-entry-point --verb=runinprefix --  "$ProtonVersion"/files/bin/wine $altvexe
+
+sleep 300
+
+STEAM_COMPAT_CLIENT_INSTALL_PATH="$steamcompatclientinstallpath" STEAM_COMPAT_DATA_PATH="$steamcompatdatapath" STEAM_COMPAT_INSTALL_PATH="$steamcompatdatapathdrive_c/Program Files/TeamSpeak 3 Client/" STEAM_COMPAT_MOUNTS="$steamcompatmounts" DXVK_STATE_CACHE_PATH="/opt/Games/Proton/Cache/TS3/ALT-V/" DXVK_LOG_PATH="/opt/Games/Proton/Logs/TS3/" WINEFSYNC=1 WINEPREFIX="$steamcompatdatapath" $reaper -- $SteamLinuxRuntimeSoldier/_v2-entry-point --verb=runinprefix --  "$ProtonVersion"/files/bin/wine "C:\\Program Files\\TeamSpeak 3 Client\\ts3client_win64.exe"
