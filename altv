@@ -1,1 +1,45 @@
+#!/bin/bash
+# Version 1.1
 
+# If you have Framedrops or freezes in Grand Theft Auto V with the non Steam Version of the Game
+# and want use Alt:V for GTA V Role Play you should use this little script.
+# 
+
+# We need the path to steam in our home, standard: "/home/yourUser/.local/share/Steam" or "/home/yourUser/.steam/steam"
+steamcompatclientinstallpath="/srv/vhosts/pitbull/.local/share/Steam"
+
+# Steam Compat Data Path to your Game Prefix
+steamcompatdatapath="/opt/Games/Proton/Prefixe/Proton Experimental/pfx/"
+
+# Steam Compat Install Path to your Game
+steamcompatinstallpath="/opt/Games/Wine/Spiele/Grand Theft Auto V"
+
+# Steam compat Mounts needed for Steam Runtime Soldier
+steamcompatmounts="/srv/vhosts/pitbull/.local/share/Steam/steamapps/common/Steamworks Shared:/opt/Games/Steam/steamapps/common/Proton - Experimental:/opt/Games/Steam/steamapps/common/SteamLinuxRuntime_soldier"
+
+# Steam Runtime
+reaper="/srv/vhosts/pitbull/.local/share/Steam/ubuntu12_32/reaper"
+
+# Path to Steam Linux runtime Soldier
+SteamLinuxRuntimeSoldier="/opt/Games/Steam/steamapps/common/SteamLinuxRuntime_soldier"
+
+# Path to the Proton Version
+ProtonVersion="/opt/Games/Steam/steamapps/common/Proton - Experimental"
+
+# Path to the Alt:V exe \ Dirty Gaming exe
+altvexe="C:\\Alt-V\\altv.exe"
+dirtyexe="C:\\Dirty\\dirty-gaming.exe"
+
+# DXVK State Cache Path
+DXVKSTATECACHEPATH="/opt/Games/Proton/Cache/Grand Theft Auto V/Alt-V/DXVK_state_cache/"
+
+# DXVK Log Path
+DXVKLOGPATH="/opt/Games/Proton/Logs/Grand Theft Auto V/Alt-V/"
+
+#DXVK Confiofile Path
+DXVKCONFIGFILE="/opt/Games/Proton/Configs/Grand Theft Auto V/Alt-V/GTA5.conf"
+
+# launch options
+launchoptions='gamemoderun mangohud obs-vkcapture'
+
+STEAM_COMPAT_CLIENT_INSTALL_PATH="$steamcompatclientinstallpath" STEAM_COMPAT_DATA_PATH="$steamcompatdatapath" STEAM_COMPAT_INSTALL_PATH="$steamcompatinstallpath" STEAM_COMPAT_MOUNTS="$steamcompatmounts" DXVK_STATE_CACHE_PATH="$DXVKSTATECACHEPATH" DXVK_LOG_PATH="$DXVKLOGPATH" DXVK_CONFIG_FILE="$DXVKCONFIGFILE" $launchoptions WINEFSYNC=1 WINEPREFIX="$steamcompatdatapath" $reaper -- $SteamLinuxRuntimeSoldier/_v2-entry-point --verb=runinprefix --  "$ProtonVersion"/files/bin/wine $altvexe
